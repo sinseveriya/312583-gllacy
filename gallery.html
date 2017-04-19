@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Глейси</title>
+    <title>Магазин мороженного Gllacy - Каталог</title>
   </head>
   <body>
       <header class="main-header">
@@ -21,22 +21,16 @@
           </ul>
         </nav>
         <div class="user-form">
-          <ul>
-            <li>
-              <img src="#" alt="Поиск по сайту">
-            </li>
-            <li>
-              <a href="#" class="login">Вход</a>
-            </li>
-            <li>
-              <a href="#" class="basket">2 товара</a>
-            </li>
-          </ul>
+            <a href="#"><img src="#" alt="Поиск по сайту"></a>
+            <a href="#" class="login">Вход</a>
+            <a href="#" class="basket">2 товара</a>
         </div>
-        <p class="work-time"> С 10 до 20, ежедневно
-          <br>
-          8 812 450-25-25
-        </p>
+        <div class="info">
+          <span class="work-time"> С 10 до 20, ежедневно</span>
+          <span class="tel">8 812 450-25-25</span>
+        </div>
+      </header>
+      <main class="main-content">
         <div class="navigation-add">
           <ul>
             <li>
@@ -50,34 +44,116 @@
             </li>
           </ul>
         </div>
-      </header>
-      <main class="main-content">
-        <form name="filter" method="post">
-          
+        <form action="#" name="filter" method="get">
+          <h2>Сливочное мороженное</h2>
+          <div class="filter">
+            <label for="filter-category" class="filter">Сортировка:</label>
+            <label for="filter-price" class="filter">Цена: 100 руб. - 500 руб.</label>
+            <label for="filter-fat" class="filter">Жирность:</label>
+            <select name="category" id="filter-category" class="filter-sort">
+              <option value="popular">по популярности</option>
+            </select>
+            <input type="range" min="100" max="500" step="1">
+            <div class="filter-radio">
+              <input type="radio" name="fat-1" id="filter-fat" value="fat">0%
+              <input type="radio" name="fat-2" id="filter-fat" value="fat" checked>до 10%
+              <input type="radio" name="fat-3" id="filter-fat" value="fat">до 30%
+              <input type="radio" name="fat-4" id="filter-fat" value="fat">свыше 30%
+            </div>
+            <label for="filter-add" class="filter">Наполнители:</label>
+            <div class="filter-additional">
+              <input type="checkbox" name="chocolate" id="filter-add" checked>шоколадные
+              <input type="checkbox" name="chocolate" id="filter-add" checked>сахарные присыпки
+              <input type="checkbox" name="fruit" id="filter-add" checked>фрукты
+              <input type="checkbox" name="syrup" id="filter-add" checked>сиропы
+              <input type="checkbox" name="jam" id="filter-add" checked>джемы
+            </div>
+            <button class="btn">Применить</button>
+          </div>
         </form>
+        <article class="catalog-item">
+          <article class="catalog-item">
+            <img src="#" alt="Товар">
+            <span class="catalog-item-price">310 Р/кг</span>
+            <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+          </article>
+          <article class="catalog-item">
+            <img src="#" alt="Товар">
+            <span class="catalog-item-price">380 Р/кг</span>
+            <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+          </article>
+          <article class="catalog-item">
+            <img src="#" alt="Товар">
+            <span class="catalog-item-price">355 Р/кг</span>
+            <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+          </article>
+          <article class="catalog-item">
+            <img src="#" alt="Товар">
+            <span class="catalog-item-price">415 Р/кг</span>
+            <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+          </article>
+          <article class="catalog-item">
+            <img src="#" alt="Товар">
+            <span class="catalog-item-price">325 Р/кг</span>
+            <a href="#">Сливочное с брусничным джемом</a>
+          </article>
+          <article class="catalog-item">
+            <img src="#" alt="Товар">
+            <span class="catalog-item-price">410 Р/кг</span>
+            <a href="#">Сливочно-черничное с цельными ягодами черники</a>
+          </article>
+          <article class="catalog-item">
+            <img src="#" alt="Товар">
+            <span class="catalog-item-price">375 Р/кг</span>
+            <a href="#">Сливочно-лимонное с карамельной присыпкой</a>
+          </article>
+          <article class="catalog-item">
+            <img src="#" alt="Товар">
+            <span class="catalog-item-price">320 Р/кг</span>
+            <a href="#">Сливочное с шоколадной стружкой</a>
+          </article>
+          <article class="catalog-item">
+            <img src="#" alt="Товар">
+            <span class="catalog-item-price">440 Р/кг</span>
+            <a href="#">Сливочно-ванильное с кусочками шоколада</a>
+          </article>
+          <article class="catalog-item">
+            <img src="#" alt="Товар">
+            <span class="catalog-item-price">435 Р/кг</span>
+            <a href="#">Сливочное с ментоловым сиропом</a>
+          </article>
+          <article class="catalog-item">
+            <img src="#" alt="Товар">
+            <span class="catalog-item-price">355 Р/кг</span>
+            <a href="#">Сливочное с кусочками черного шоколада</a>
+          </article>
+          <article class="catalog-item">
+            <img src="#" alt="Товар">
+            <span class="catalog-item-price">420 Р/кг</span>
+            <a href="#">Сливочное с мятным сиропом</a>
+          </article>
+          <div class="catalog-page">
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">Вперед</a>
+          </div>
+        </article>
       </main>
       <footer class="main-footer">
-        <action class="network-contact">
+        <article class="network-contact">
           <a href="#">Twitter</a>
           <a href="#">Instagram</a>
           <a href="#">Facebook</a>
           <a href="#">Vkontakte</a>
-        </action>
+        </article>
         <div class="work-document">
-          <ul>
-            <li>
-              <a href="#">Для поставщиков</a>
-            </li>
-            <li>
-              <a href="#">Наши документы</a>
-            </li>
-            <li>
-              <a href="#">О производстве</a>
-            </li>
-            <li>
-              <a href="#">Экологические стандарты</a>
-            </li>
-          </ul>
+            <a href="#">Для поставщиков</a>
+            <a href="#">Наши документы</a>
+            <a href="#">О производстве</a>
+            <a href="#">Экологические стандарты</a>
         </div>
         <div class="developer">
           <img scr="#" alt="Логотип HTML Academy">
