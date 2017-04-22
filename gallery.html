@@ -20,10 +20,18 @@
             </li>
           </ul>
         </nav>
-        <div class="user-form">
-            <a href="#"><img src="#" alt="Поиск по сайту"></a>
-            <a href="#" class="login">Вход</a>
-            <a href="#" class="basket">2 товара</a>
+        <div class="user-actions">
+          <ul>
+            <li>
+              <input type="submit" class="btn" value="Поиск по сайту">
+            </li>
+            <li>
+              <input type="submit" class="btn" value="Вход">
+            </li>
+            <li>
+              <a href="#" class="basket">2 товара</a>
+            </li>
+          </ul>
         </div>
         <div class="info">
           <span class="work-time"> С 10 до 20, ежедневно</span>
@@ -44,32 +52,51 @@
             </li>
           </ul>
         </div>
+        <h1>Сливочное мороженное</h1>
         <form action="#" name="filter" method="get">
-          <h2>Сливочное мороженное</h2>
-          <div class="filter">
-            <label for="filter-category" class="filter">Сортировка:</label>
-            <label for="filter-price" class="filter">Цена: 100 руб. - 500 руб.</label>
-            <label for="filter-fat" class="filter">Жирность:</label>
+          <label class="filter">
+            Сортировка
             <select name="category" id="filter-category" class="filter-sort">
               <option value="popular">по популярности</option>
+              <option value="first-cheap">сначала недорогие</option>
+              <option value="first-expensive">сначала дорогие</option>
+              <option value="by-fat">по жирности</option>
             </select>
+          </label>
+          <label class="filter">
+            Цена: 100 руб. - 500 руб.
             <input type="range" min="100" max="500" step="1">
+          </label>
+          <label class="filter">
+            Жирность:
             <div class="filter-radio">
               <input type="radio" name="fat-1" id="filter-fat" value="fat">0%
               <input type="radio" name="fat-2" id="filter-fat" value="fat" checked>до 10%
               <input type="radio" name="fat-3" id="filter-fat" value="fat">до 30%
               <input type="radio" name="fat-4" id="filter-fat" value="fat">свыше 30%
             </div>
-            <label for="filter-add" class="filter">Наполнители:</label>
+          </label>
+          <label class="filter">
+            Наполнители:
             <div class="filter-additional">
+            <label>
               <input type="checkbox" name="chocolate" id="filter-add" checked>шоколадные
+            </label>
+            <label>
               <input type="checkbox" name="chocolate" id="filter-add" checked>сахарные присыпки
+            </label>
+            <label>
               <input type="checkbox" name="fruit" id="filter-add" checked>фрукты
+            </label>
+            <label>
               <input type="checkbox" name="syrup" id="filter-add" checked>сиропы
+            </label>
+            <label>
               <input type="checkbox" name="jam" id="filter-add" checked>джемы
+            </label>
             </div>
-            <button class="btn">Применить</button>
-          </div>
+          </label>
+          <input type="submit" class="btn" value="Применить">
         </form>
         <article class="catalog-item">
           <article class="catalog-item">
@@ -86,6 +113,7 @@
             <img src="#" alt="Товар">
             <span class="catalog-item-price">355 Р/кг</span>
             <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+            <input type="button" class="btn hidden">Быстрый просмотр
           </article>
           <article class="catalog-item">
             <img src="#" alt="Товар">
@@ -141,14 +169,34 @@
             <a href="#">Вперед</a>
           </div>
         </article>
+        <section class="basket">
+          <table class="basket-item">
+            <tr>
+              <td><img src="#" alt="Мой выбор"></td>
+              <td>Пломбир с апельсиновым джемом</td>
+              <td>1,5 кг * 200 руб.</td>
+              <td>300 руб.</td>
+            </tr>
+            <tr>
+              <td><img src="#" alt="Мой выбор"></td>
+              <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+              <td>1,5 кг * 300 руб.</td>
+              <td>450 руб.</td>
+            </tr>
+            <tr>
+              <td colspan="4">Итого 750 руб.</td>
+            </tr>
+          </table>
+          <input type="submit" class="btn" value="Оформить заказ">
+        </section>
       </main>
       <footer class="main-footer">
-        <article class="network-contact">
+        <div class="network-contact">
           <a href="#">Twitter</a>
           <a href="#">Instagram</a>
           <a href="#">Facebook</a>
           <a href="#">Vkontakte</a>
-        </article>
+        </div>
         <div class="work-document">
             <a href="#">Для поставщиков</a>
             <a href="#">Наши документы</a>
